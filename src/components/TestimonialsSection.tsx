@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import testimonialsBg from "@/assets/testimonials-bg.jpg";
 
 const testimonials = [
   {
@@ -20,8 +21,15 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section id="testimonials" className="py-20 md:py-28 relative overflow-hidden">
+      <img
+        src={testimonialsBg}
+        alt="Team celebrating with medals"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-background/80" />
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="text-center mb-16">
           <p className="text-secondary font-heading tracking-[0.2em] text-sm mb-2">VOICES</p>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground">
@@ -32,7 +40,7 @@ const TestimonialsSection = () => {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-card border border-border rounded-lg p-6 hover:border-primary/40 transition-colors"
+              className="bg-card/80 backdrop-blur-sm border border-border rounded-lg p-6 hover:border-primary/40 transition-colors"
             >
               <Quote className="w-8 h-8 text-primary/30 mb-4" />
               <p className="text-muted-foreground text-sm leading-relaxed mb-6">"{t.quote}"</p>

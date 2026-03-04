@@ -1,4 +1,5 @@
 import { Trophy, Medal, Award } from "lucide-react";
+import achievementsBg from "@/assets/achievements-bg.png";
 
 const categories = [
   {
@@ -42,8 +43,15 @@ const categories = [
 
 const AchievementsSection = () => {
   return (
-    <section id="achievements" className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section id="achievements" className="py-20 md:py-28 relative overflow-hidden">
+      <img
+        src={achievementsBg}
+        alt="Championship trophies and medals"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-background/80" />
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="text-center mb-16">
           <p className="text-secondary font-heading tracking-[0.2em] text-sm mb-2">OUR PRIDE</p>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground">
@@ -54,7 +62,7 @@ const AchievementsSection = () => {
           {categories.map((cat) => (
             <div
               key={cat.title}
-              className={`bg-card border ${cat.borderClass} rounded-lg p-6 transition-colors`}
+              className={`bg-card/80 backdrop-blur-sm border ${cat.borderClass} rounded-lg p-6 transition-colors`}
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className={`w-10 h-10 rounded-full ${cat.bgClass} flex items-center justify-center`}>

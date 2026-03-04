@@ -1,9 +1,17 @@
 import { Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
+import contactBg from "@/assets/contact-bg.jpg";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 md:py-28 bg-muted/30">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section id="contact" className="py-20 md:py-28 relative overflow-hidden">
+      <img
+        src={contactBg}
+        alt="Modern sports training facility exterior"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-muted/85" />
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="text-center mb-16">
           <p className="text-secondary font-heading tracking-[0.2em] text-sm mb-2">GET IN TOUCH</p>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground">
@@ -52,7 +60,7 @@ const ContactSection = () => {
             </div>
 
             {/* Map placeholder */}
-            <div className="aspect-video bg-card border border-border rounded-lg flex items-center justify-center">
+            <div className="aspect-video bg-card/80 backdrop-blur-sm border border-border rounded-lg flex items-center justify-center">
               <p className="text-muted-foreground text-sm font-heading">📍 Map Placeholder</p>
             </div>
           </div>
@@ -61,7 +69,7 @@ const ContactSection = () => {
           <form
             action="https://formsubmit.co/wushukungfufitnesscenter@gmail.com"
             method="POST"
-            className="space-y-4"
+            className="space-y-4 bg-card/80 backdrop-blur-sm border border-border rounded-lg p-6"
           >
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_subject" value="New Student Application - MAM Sports Club" />

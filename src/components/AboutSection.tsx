@@ -1,4 +1,5 @@
 import { Shield, Heart, Users, Award } from "lucide-react";
+import aboutBg from "@/assets/about-bg.png";
 
 const features = [
   { icon: Shield, title: "Self-Defense", desc: "Practical techniques for real-world safety and awareness." },
@@ -9,8 +10,15 @@ const features = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section id="about" className="py-20 md:py-28 relative overflow-hidden">
+      <img
+        src={aboutBg}
+        alt="Traditional martial arts dojo interior"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-background/80" />
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="text-center mb-16">
           <p className="text-secondary font-heading tracking-[0.2em] text-sm mb-2">WHO WE ARE</p>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground">
@@ -27,7 +35,7 @@ const AboutSection = () => {
           {features.map((f) => (
             <div
               key={f.title}
-              className="bg-card border border-border rounded-lg p-6 text-center hover:border-primary/50 transition-colors group"
+              className="bg-card/80 backdrop-blur-sm border border-border rounded-lg p-6 text-center hover:border-primary/50 transition-colors group"
             >
               <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
                 <f.icon className="w-6 h-6 text-primary" />

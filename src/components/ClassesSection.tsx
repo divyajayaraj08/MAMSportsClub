@@ -1,4 +1,5 @@
 import { Swords, Flame, Zap, Brain, Accessibility } from "lucide-react";
+import classesBg from "@/assets/classes-bg.png";
 
 const benefits = [
   { icon: Swords, label: "Self-Defense" },
@@ -16,8 +17,15 @@ const levels = [
 
 const ClassesSection = () => {
   return (
-    <section id="classes" className="py-20 md:py-28 bg-muted/30">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section id="classes" className="py-20 md:py-28 relative overflow-hidden">
+      <img
+        src={classesBg}
+        alt="Wushu students training in formation"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-muted/85" />
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="text-center mb-16">
           <p className="text-secondary font-heading tracking-[0.2em] text-sm mb-2">TRAIN WITH US</p>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground">
@@ -37,7 +45,7 @@ const ClassesSection = () => {
           {benefits.map((b) => (
             <div
               key={b.label}
-              className="flex items-center gap-2 bg-card border border-border rounded-full px-5 py-2.5"
+              className="flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-border rounded-full px-5 py-2.5"
             >
               <b.icon className="w-4 h-4 text-primary" />
               <span className="text-sm text-foreground font-medium">{b.label}</span>
@@ -49,11 +57,10 @@ const ClassesSection = () => {
           {levels.map((l, i) => (
             <div
               key={l.title}
-              className={`rounded-lg p-6 border text-center ${
-                i === 1
-                  ? "bg-primary/10 border-primary/40"
-                  : "bg-card border-border"
-              }`}
+              className={`rounded-lg p-6 border text-center backdrop-blur-sm ${i === 1
+                  ? "bg-primary/20 border-primary/40"
+                  : "bg-card/80 border-border"
+                }`}
             >
               <h3 className="font-heading text-xl font-bold text-foreground mb-2">{l.title}</h3>
               <p className="text-muted-foreground text-sm">{l.desc}</p>

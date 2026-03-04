@@ -1,3 +1,5 @@
+import scheduleBg from "@/assets/schedule-bg.png";
+
 const schedule = [
   { day: "Monday", kids: "5:00 PM – 6:30 PM", adults: "7:00 PM – 8:30 PM" },
   { day: "Tuesday", kids: "5:00 PM – 6:30 PM", adults: "7:00 PM – 8:30 PM" },
@@ -10,15 +12,22 @@ const schedule = [
 
 const ScheduleSection = () => {
   return (
-    <section id="schedule" className="py-20 md:py-28 bg-background">
-      <div className="container mx-auto px-4 max-w-4xl">
+    <section id="schedule" className="py-20 md:py-28 relative overflow-hidden">
+      <img
+        src={scheduleBg}
+        alt="Martial artists training at sunrise outdoors"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-background/85" />
+      <div className="container mx-auto px-4 max-w-4xl relative z-10">
         <div className="text-center mb-16">
           <p className="text-secondary font-heading tracking-[0.2em] text-sm mb-2">PLAN YOUR WEEK</p>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground">
             Training <span className="text-gradient-primary">Schedule</span>
           </h2>
         </div>
-        <div className="overflow-x-auto rounded-lg border border-border">
+        <div className="overflow-x-auto rounded-lg border border-border backdrop-blur-sm">
           <table className="w-full">
             <thead>
               <tr className="bg-primary/10">
@@ -29,7 +38,7 @@ const ScheduleSection = () => {
             </thead>
             <tbody>
               {schedule.map((row, i) => (
-                <tr key={row.day} className={i % 2 === 0 ? "bg-card" : "bg-accent/30"}>
+                <tr key={row.day} className={i % 2 === 0 ? "bg-card/80" : "bg-accent/40"}>
                   <td className="py-3 px-4 font-medium text-foreground text-sm">{row.day}</td>
                   <td className="py-3 px-4 text-muted-foreground text-sm">{row.kids}</td>
                   <td className="py-3 px-4 text-muted-foreground text-sm">{row.adults}</td>

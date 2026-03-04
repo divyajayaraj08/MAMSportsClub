@@ -1,3 +1,5 @@
+import galleryBg from "@/assets/gallery-bg.png";
+
 const images = [
   { label: "Training Session", emoji: "🥋" },
   { label: "Competition Day", emoji: "🏆" },
@@ -9,8 +11,15 @@ const images = [
 
 const GallerySection = () => {
   return (
-    <section id="gallery" className="py-20 md:py-28 bg-muted/30">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section id="gallery" className="py-20 md:py-28 relative overflow-hidden">
+      <img
+        src={galleryBg}
+        alt="Wushu martial artist performing acrobatic kick"
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 bg-muted/80" />
+      <div className="container mx-auto px-4 max-w-6xl relative z-10">
         <div className="text-center mb-16">
           <p className="text-secondary font-heading tracking-[0.2em] text-sm mb-2">MOMENTS</p>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-foreground">
@@ -21,7 +30,7 @@ const GallerySection = () => {
           {images.map((img) => (
             <div
               key={img.label}
-              className="aspect-square bg-card border border-border rounded-lg flex flex-col items-center justify-center hover:border-primary/50 transition-colors group cursor-pointer"
+              className="aspect-square bg-card/70 backdrop-blur-sm border border-border rounded-lg flex flex-col items-center justify-center hover:border-primary/50 transition-colors group cursor-pointer"
             >
               <span className="text-4xl mb-3 group-hover:scale-110 transition-transform">{img.emoji}</span>
               <p className="text-muted-foreground text-sm font-heading tracking-wider">{img.label}</p>
