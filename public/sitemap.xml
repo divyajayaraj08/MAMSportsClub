@@ -6,58 +6,74 @@
 
   <!-- Home -->
   <url>
-    <loc>https://martialartsclub.lovable.app/</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://divyajayaraj08.github.io/MAMSportsClub/</loc>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- About -->
   <url>
-    <loc>https://martialartsclub.lovable.app/about</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://divyajayaraj08.github.io/MAMSportsClub/#about</loc>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Programs -->
+  <!-- Classes / Programs -->
   <url>
-    <loc>https://martialartsclub.lovable.app/programs</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://divyajayaraj08.github.io/MAMSportsClub/#classes</loc>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Achievements -->
   <url>
-    <loc>https://martialartsclub.lovable.app/achievements</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://divyajayaraj08.github.io/MAMSportsClub/#achievements</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Coach -->
+  <url>
+    <loc>https://divyajayaraj08.github.io/MAMSportsClub/#coach</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Schedule -->
+  <url>
+    <loc>https://divyajayaraj08.github.io/MAMSportsClub/#schedule</loc>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Gallery -->
   <url>
-    <loc>https://martialartsclub.lovable.app/gallery</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://divyajayaraj08.github.io/MAMSportsClub/#gallery</loc>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Testimonials -->
+  <url>
+    <loc>https://divyajayaraj08.github.io/MAMSportsClub/#testimonials</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- Contact -->
   <url>
-    <loc>https://martialartsclub.lovable.app/contact</loc>
-    <lastmod>2026-03-01</lastmod>
+    <loc>https://divyajayaraj08.github.io/MAMSportsClub/#contact</loc>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <!-- Apply -->
-  <url>
-    <loc>https://martialartsclub.lovable.app/apply</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 
 </urlset>

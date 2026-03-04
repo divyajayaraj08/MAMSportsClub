@@ -1,15 +1,13 @@
-# robots.txt — Martial Arts and Multi Sports Club, Tenkasi
-# Generated for: https://martialartsclub.lovable.app
+# robots.txt — MAM Sports Club (Martial Arts & Multi Sports Club)
+# Website: https://divyajayaraj08.github.io/MAMSportsClub/
 
 User-agent: *
 Allow: /
 
-# Block any sensitive or irrelevant paths
+# Block sensitive paths
 Disallow: /admin/
 Disallow: /api/
-Disallow: /_next/
 Disallow: /private/
-Disallow: /*.json$
 
 # Sitemap location
-Sitemap: https://martialartsclub.lovable.app/sitemap.xml
+Sitemap: https://divyajayaraj08.github.io/MAMSportsClub/sitemap.xml
